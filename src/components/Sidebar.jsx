@@ -1,9 +1,9 @@
-function Sidebar({setpage}){
+function Sidebar({setPage}){
     return(
         <div style={styles.sidebar}>
-            <button onClick={()=>setpage("dashboard")}>Home</button>
-            <button onClick={()=>setpage("products")}>Settings</button>
-            <button onClick={()=>setpage("orders")}>Profile</button>
+            <button onClick={()=>setPage("dashboard")}>Dashboard</button>
+            <button onClick={()=>setPage("products")}>Products</button>
+            <button onClick={()=>setPage("orders")}>Orders</button>
         </div>
     )
 

@@ -2,6 +2,8 @@ import{useState} from "react";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
+import Products from "./pages/Products";
+
 function App() {
   const [page, setPage] = useState("dashboard");
   return (
@@ -11,6 +13,7 @@ function App() {
         <Sidebar setPage={setPage} />
         <div style={{padding:"20px",width:"100%"}}></div>
         {page === "dashboard" && <Dashboard />}
+        {page === "products" && <Products />}
       </div>
     </div>
   );
