@@ -1,0 +1,19 @@
+import{useState} from "react";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./components/Dashboard";
+function App() {
+  const [page, setPage] = useState("dashboard");
+  return (
+    <div>
+      <Navbar />
+      <div style={{display:"flex"}}>
+        <Sidebar setPage={setPage} />
+        <div style={{padding:"20px",width:"100%"}}></div>
+        {page === "dashboard" && <Dashboard />}
+      </div>
+    </div>
+  );
+}
+
+export default App;
